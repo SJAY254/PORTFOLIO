@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally June Wendo | Social Media Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --dark-brown: #5D4037;
+            --medium-brown: #8D6E63;
+            --light-brown: #D7CCC8;
+            --accent-brown: #A1887F;
+            --cream: #F5F1EE;
+            --text-dark: #3E2723;
+            --text-light: #795548;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--cream);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-brown);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--medium-brown);
+            margin: 15px auto;
+        }
+        
+        /* Header Section */
+        header {
+            background: linear-gradient(rgba(93, 64, 55, 0.8), rgba(93, 64, 55, 0.9)), url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        
+        .header-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .header-content .title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        /* Skills Section */
+        .skills {
+            background-color: var(--light-brown);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--dark-brown);
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list i {
+            color: var(--medium-brown);
+            margin-right: 10px;
+            font-size: 1.2rem;
+            width: 25px;
+        }
+        
+        /* Projects Section */
+        .projects {
+            background-color: white;
+        }
+        
+        .project {
+            margin-bottom: 80px;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .project-name {
+            font-size: 2.2rem;
+            color: var(--dark-brown);
+        }
+        
+        .project-industry {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .project-column {
+            background: var(--cream);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        
+        .project-column h4 {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .project-column h4 i {
+            margin-right: 10px;
+            color: var(--medium-brown);
+        }
+        
+        .project-column ul {
+            list-style: none;
+        }
+        
+        .project-column li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .project-column li i {
+            color: var(--medium-brown);
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        /* Why Work With Me Section */
+        .why-work {
+            background-color: var(--light-brown);
+        }
+        
+        .why-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pillar {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .pillar i {
+            font-size: 2.5rem;
+            color: var(--medium-brown);
+            margin-bottom: 15px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--medium-brown);
+            margin-right: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-brown);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Sally June Wendo</h1>
+                <div class="title">Social Media Manager / Content Creator</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I am a dedicated content creation specialist and social media professional. I possess strong social media experience in strategic feed posting, platform optimization, and campaign execution and community management.</p>
+                <p>I am eager to bring my skills to an in-house team at a reputable fashion brand, utilizing innovative content strategy to elevate brand storytelling and achieve measurable results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Tools</h2>
+            <div class="skills-grid">
+                <!-- Hard Skills -->
+                <div class="skill-category">
+                    <h3>Hard Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-pen-fancy"></i> Content Creation</li>
+                        <li><i class="fas fa-video"></i> Video Production & Editing</li>
+                        <li><i class="fas fa-edit"></i> Copywriting</li>
+                        <li><i class="fas fa-chess"></i> Strategy Development</li>
+                        <li><i class="fas fa-chart-line"></i> Analytics Interpretation & Reporting</li>
+                        <li><i class="fas fa-code-branch"></i> Algorithms and Visibility</li>
+                        <li><i class="fas fa-users"></i> Community Management</li>
+                        <li><i class="fas fa-vial"></i> A/B Testing</li>
+                        <li><i class="fas fa-binoculars"></i> Trend Spotting</li>
+                    </ul>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-tasks"></i> Project Management</li>
+                        <li><i class="fas fa-search"></i> Attention to Detail</li>
+                        <li><i class="fas fa-clock"></i> Time Management</li>
+                        <li><i class="fas fa-comments"></i> Communication (Written & Verbal)</li>
+                    </ul>
+                </div>
+                
+                <!-- Tools -->
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-palette"></i> Adobe Creative Suite</li>
+                        <li><i class="fab fa-canva"></i> Canva Pro</li>
+                        <li><i class="fas fa-feather-alt"></i> Hootsuite</li>
+                        <li><i class="fas fa-film"></i> CapCut</li>
+                        <li><i class="fab fa-slack"></i> Slack</li>
+                        <li><i class="fas fa-seedling"></i> Sprout Social</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-header">
+                    <h3 class="project-name">Recreationals Clothing</h3>
+                    <div class="project-industry">Fashion Industry</div>
+                </div>
+                
+                <div class="project-details">
+                    <div class="project-column">
+                        <h4><i class="fas fa-tasks"></i> Responsibilities</h4>
+                        <ul>
+                            <li><i class="fas fa-calendar-alt"></i> Designing and managing a content calendar</li>
+                            <li><i class="fas fa-chart-bar"></i> Monitoring and tracking key metrics for weekly/monthly reporting</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-column">
+                        <h4><i class="fas fa-road"></i> Approach</h4>
+                        <ul>
+                            <li><i class="fas fa-sync-alt"></i> Cross-platform Integration</li>
+                            <li><i class="fas fa-leaf"></i> Consistent posting of organic content</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-column">
+                        <h4><i class="fas fa-chart-line"></i> Results</h4>
+                        <ul>
+                            <li><i class="fas fa-user-plus"></i> Increased follower count by 15% over 2 months</li>
+                            <li><i class="fas fa-heart"></i> Average engagement rate of 3.1% per post</li>
+                            <li><i class="fas fa-mouse-pointer"></i> Unique 'Link in Bio' clicks resulted in a 5% increase in website traffic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="project-header">
+                    <h3 class="project-name">Beyond the Savannah</h3>
+                    <div class="project-industry">Remote HR Startup</div>
+                </div>
+                
+                <div class="project-details">
+                    <div class="project-column">
+                        <h4><i class="fas fa-tasks"></i> Responsibilities</h4>
+                        <ul>
+                            <li><i class="fab fa-whatsapp"></i> Daily community private WhatsApp group management</li>
+                            <li><i class="fas fa-envelope"></i> Planning, writing, and deployment of the monthly email newsletter</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-column">
+                        <h4><i class="fas fa-road"></i> Approach</h4>
+                        <ul>
+                            <li><i class="fas fa-bullseye"></i> Audience-Centric Storytelling & Relevance Mapping</li>
+                            <li><i class="fas fa-sitemap"></i> Content Sequencing & CTA Optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-column">
+                        <h4><i class="fas fa-chart-line"></i> Results</h4>
+                        <ul>
+                            <li><i class="fas fa-envelope-open"></i> Achieved an average 35% Open Rate across all posts</li>
+                            <li><i class="fas fa-rocket"></i> 15% lift in application conversion for the remote roles and offers advertised</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me Section -->
+    <section class="why-work">
+        <div class="container">
+            <h2 class="section-title">Why Work With Me</h2>
+            <div class="why-content">
+                <p>By choosing to partner with me, you gain an all-in-one, integrated specialist who consistently delivers on four critical pillars of modern brand success:</p>
+                
+                <div class="pillars">
+                    <div class="pillar">
+                        <i class="fas fa-users"></i>
+                        <h4>Unyielding Community Loyalty</h4>
+                    </div>
+                    <div class="pillar">
+                        <i class="fas fa-headset"></i>
+                        <h4>Exceptional Customer Service</h4>
+                    </div>
+                    <div class="pillar">
+                        <i class="fas fa-pen-nib"></i>
+                        <h4>Compelling & Conversion-Focused Copywriting</h4>
+                    </div>
+                    <div class="pillar">
+                        <i class="fas fa-chart-pie"></i>
+                        <h4>Data-Informed Vision for Market Opportunities</h4>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 30px;">Looking forward to be part of your in-house team in the dynamic fashion space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>wendookelo@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+254792383884</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sally June Wendo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
